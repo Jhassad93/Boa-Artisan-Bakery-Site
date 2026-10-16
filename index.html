@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boa Artisan Bakery | Padaria artesanal em Moema</title>
+<meta name="description" content="Padaria artesanal de origem coreana em Moema. Pães de fermentação natural e croissants feitos todos os dias na Alameda dos Jurupis, 421.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Boa Artisan Bakery">
+<meta property="og:title" content="Boa Artisan Bakery, padaria artesanal em Moema">
+<meta property="og:description" content="Pães de fermentação natural e croissants feitos todo dia na Alameda dos Jurupis, 421. Encomende pelo WhatsApp ou venha tomar café com a gente.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://boa-artisan-bakery.vercel.app/">
+<meta property="og:image" content="https://boa-artisan-bakery.vercel.app/img/og-boa-paes.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boa Artisan Bakery, padaria artesanal em Moema, com a vitrine de pães ao lado">
+<meta name="twitter:image" content="https://boa-artisan-bakery.vercel.app/img/og-boa-paes.jpg">
+<meta name="theme-color" content="#245441">
+<link rel="canonical" href="https://boa-artisan-bakery.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/gowun-700.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/noto-400.woff2">
+<style>
+  /* Fontes hospedadas no próprio site, só com os caracteres usados (desempenho e LGPD). Ao mudar textos com acentos ou hangul novos, gerar os arquivos de novo. */
+  @font-face { font-family:"Caveat"; font-style:normal; font-weight:400; font-display:swap; src:url(/fonts/caveat-400.woff2) format("woff2"); }
+  @font-face { font-family:"Gowun Batang"; font-style:normal; font-weight:400; font-display:swap; src:url(/fonts/gowun-400.woff2) format("woff2"); }
+  @font-face { font-family:"Gowun Batang"; font-style:normal; font-weight:700; font-display:swap; src:url(/fonts/gowun-700.woff2) format("woff2"); }
+  @font-face { font-family:"Noto Sans KR"; font-style:normal; font-weight:400; font-display:swap; src:url(/fonts/noto-400.woff2) format("woff2"); }
+  @font-face { font-family:"Noto Sans KR"; font-style:normal; font-weight:500; font-display:swap; src:url(/fonts/noto-500.woff2) format("woff2"); }
+  @font-face { font-family:"Noto Sans KR"; font-style:normal; font-weight:700; font-display:swap; src:url(/fonts/noto-700.woff2) format("woff2"); }
+  /* Layout: uma vitrine de padaria em faixas. Creme e papel hanji alternados, o jarro-lua como forma assinatura e o verde 흑록 como âncora. Tema único e claro, de propósito: é a identidade da marca. */
+  :root {
+    --creme:#FAF6EE; --creme-elevado:#FFFDF8; --linha:#E6DCCB;
+    --tinta:#2A2118; --tinta-suave:#6B5D4E;
+    --verde-boa:#2E674E; --verde-profundo:#245441; --sobre-verde:#FFFFFF;
+    --jade:#9ED6C0; --jade-suave:#E4F1EB;
+    --casca:#C8955A; --casca-suave:#F3E4CF; --casca-texto:#7A4E1E;
+    --font-titulo:"Gowun Batang","Noto Serif KR",Georgia,serif;
+    --font-texto:"Noto Sans KR","Helvetica Neue",Arial,sans-serif;
+    --font-lousa:"Caveat","Gowun Batang",cursive;
+    --raio-pequeno:6px; --raio-medio:14px; --raio-pilula:999px;
+    --largura-maxima:1120px; --largura-texto:680px;
+    --hanji:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPHRpdGxlPlBhcGVsIGhhbmppIOKAlCB0ZXh0dXJhIGRlIGZpYnJhcyBwYXJhIGZ1bmRvcyBjcmVtZTwvdGl0bGU+CiAgPGZpbHRlciBpZD0iZmlicmFzIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjAxOCAwLjA1IiBudW1PY3RhdmVzPSIzIiBzZWVkPSI3IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiByZXN1bHQ9InJ1aWRvIi8+CiAgICA8ZmVDb2xvck1hdHJpeCBpbj0icnVpZG8iIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAuNTUgIDAgMCAwIDAgMC40NSAgMCAwIDAgMCAwLjMyICAwIDAgMCAwLjU1IC0wLjE4IiByZXN1bHQ9InRpbnRhIi8+CiAgPC9maWx0ZXI+CiAgPGZpbHRlciBpZD0icG9yb3MiIHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNiIgbnVtT2N0YXZlcz0iMiIgc2VlZD0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIgcmVzdWx0PSJydWlkbyIvPgogICAgPGZlQ29sb3JNYXRyaXggaW49InJ1aWRvIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwLjU1ICAwIDAgMCAwIDAuNDcgIDAgMCAwIDAgMC4zNiAgMCAwIDAgMC4zNSAtMC4xMiIvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRkFGNkVFIi8+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbHRlcj0idXJsKCNmaWJyYXMpIi8+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbHRlcj0idXJsKCNwb3JvcykiLz4KPC9zdmc+Cg==");
+    --jarro:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgMjEwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIxMCI+CiAgPHRpdGxlPkphcnJvLWx1YSAoZGFsaGFuZ2FyaSkg4oCUIHNpbGh1ZXRhIHBhcmEgcmVjb3J0ZSBkZSBmb3RvczwvdGl0bGU+CiAgPHBhdGggZmlsbD0iIzJFNjc0RSIgZD0iTTYyIDggSDE1OCBWMTQgQzE1OCAxOCAxNTQgMjAgMTUwIDIyIEMxOTIgMzQgMjE0IDY2IDIxNCAxMDQgQzIxNCAxNTAgMTg0IDE4NiAxNDYgMjAwIEg3NCBDMzYgMTg2IDYgMTUwIDYgMTA0IEM2IDY2IDI4IDM0IDcwIDIyIEM2NiAyMCA2MiAxOCA2MiAxNCBaIi8+Cjwvc3ZnPgo=");
+    color-scheme:light;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:calc(var(--altura-topo, 73px) + 11px); }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  body { margin:0; background:var(--creme); color:var(--tinta); font-family:var(--font-texto); font-size:16px; line-height:26px; -webkit-font-smoothing:antialiased; }
+  body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top, 0px); z-index:10; background:var(--creme); }
+  h1, h2, h3 { font-family:var(--font-titulo); font-weight:700; color:var(--tinta); margin:0; text-wrap:balance; }
+  p { margin:0; }
+  a { color:var(--verde-boa); }
+  a:focus-visible, button:focus-visible { outline:2px solid var(--verde-profundo); outline-offset:2px; border-radius:4px; }
+  [lang="ko"] { font-feature-settings:normal; }
+
+  .faixa { padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+  .miolo { max-width:var(--largura-maxima); margin:0 auto; }
+  .secao { padding-block:80px; }
+  .hanji { background-color:var(--creme); background-image:linear-gradient(rgba(250,246,238,.45), rgba(250,246,238,.45)), var(--hanji); background-size:auto, 400px 400px; }
+
+  /* Cabeçalho */
+  .topo { position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--creme); border-bottom:1px solid var(--linha); }
+  .topo .miolo { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:14px; }
+  .marca { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--tinta); }
+  .selo { flex:none; width:44px; height:44px; border-radius:50%; background:var(--verde-boa); color:var(--sobre-verde); display:flex; align-items:center; justify-content:center; font-family:var(--font-titulo); font-size:15px; font-weight:700; box-shadow:inset 0 0 0 2px var(--verde-boa), inset 0 0 0 3px var(--jade); }
+  .nome { font-family:var(--font-titulo); font-size:22px; line-height:26px; font-weight:700; }
+  .nome small { display:block; font-family:var(--font-texto); font-size:12px; line-height:16px; font-weight:400; color:var(--tinta-suave); }
+  .topo nav { display:flex; gap:24px; }
+  .topo nav a { font-size:14px; line-height:20px; font-weight:500; color:var(--tinta); text-decoration:none; }
+  .topo nav a:hover { color:var(--verde-boa); }
+  @media (max-width:900px) { .topo nav { display:none; } }
+
+  /* Botões */
+  .botao { display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:var(--font-texto); font-size:15px; line-height:20px; font-weight:500; border-radius:var(--raio-pilula); padding:12px 22px; border:2px solid transparent; text-decoration:none; white-space:nowrap; }
+  .botao.primario { background:var(--verde-boa); color:var(--sobre-verde); }
+  .botao.primario:hover { background:var(--verde-profundo); }
+  .botao.secundario { color:var(--verde-boa); border-color:var(--verde-boa); background:transparent; }
+  .botao.secundario:hover { background:var(--jade-suave); }
+  .botao.pequeno { font-size:14px; padding:9px 18px; }
+
+  /* Hero */
+  .hero { padding-block:72px 88px; }
+  .hero .miolo { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr); gap:56px; align-items:center; }
+  .hero h1 { font-size:52px; line-height:60px; letter-spacing:-0.01em; }
+  .hero .abertura { margin-top:20px; max-width:560px; font-size:18px; line-height:30px; }
+  .hero .acoes { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .notas { display:flex; flex-wrap:wrap; gap:12px 28px; margin-top:32px; padding-top:20px; border-top:1px solid var(--linha); max-width:560px; }
+  .nota { display:flex; align-items:baseline; gap:8px; }
+  .nota strong { font-family:var(--font-titulo); font-size:30px; line-height:34px; color:var(--verde-profundo); }
+  .nota span { font-size:14px; line-height:20px; color:var(--tinta-suave); }
+  .jarro { position:relative; width:100%; max-width:420px; margin-inline:auto; aspect-ratio:220/210; background:var(--jade); -webkit-mask:var(--jarro) center/contain no-repeat; mask:var(--jarro) center/contain no-repeat; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:18% 14% 10%; }
+  .jarro .ppang { font-family:var(--font-titulo); font-weight:700; font-size:clamp(88px, 14vw, 132px); line-height:1; color:var(--verde-profundo); }
+  .jarro .leitura { margin-top:10px; font-family:var(--font-lousa); font-size:28px; line-height:30px; color:var(--tinta); }
+  .legenda-jarro { max-width:340px; margin:16px auto 0; text-align:center; font-size:14px; line-height:22px; color:var(--tinta-suave); }
+
+  /* Títulos de seção */
+  .cabeca { max-width:var(--largura-texto); margin-bottom:40px; }
+  .rotulo-ko { display:block; margin-bottom:8px; font-size:13px; line-height:18px; font-weight:500; letter-spacing:.08em; color:var(--verde-boa); }
+  .cabeca h2 { font-size:36px; line-height:44px; }
+  .cabeca p { margin-top:14px; font-size:18px; line-height:30px; }
+
+  /* Sobre */
+  .sobre .miolo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:start; }
+  .sobre .texto { display:grid; gap:16px; max-width:var(--largura-texto); }
+  .sobre .texto p:first-of-type { font-size:18px; line-height:30px; }
+  .linha-tempo { list-style:none; margin:0; padding:0; display:grid; gap:0; border-left:2px solid var(--jade); }
+  .linha-tempo li { position:relative; padding:0 0 28px 28px; }
+  .linha-tempo li:last-child { padding-bottom:0; }
+  .linha-tempo li::before { content:""; position:absolute; left:-8px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--creme); border:2px solid var(--verde-boa); }
+  .linha-tempo .quando { display:block; font-size:13px; line-height:20px; font-weight:500; color:var(--verde-boa); letter-spacing:.04em; }
+  .linha-tempo h3 { font-size:22px; line-height:30px; margin-top:2px; }
+  .linha-tempo p { margin-top:4px; color:var(--tinta-suave); }
+
+  /* O que fazemos */
+  .grade-servicos { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:20px; }
+  @media (max-width:1000px) { .grade-servicos { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+  @media (max-width:560px) { .grade-servicos { grid-template-columns:minmax(0,1fr); } }
+  .servico { display:flex; flex-direction:column; gap:12px; padding:24px; background:var(--creme-elevado); border:1px solid var(--linha); border-radius:var(--raio-medio); }
+  .servico h3 { font-size:22px; line-height:30px; }
+  .servico p { color:var(--tinta); }
+  .servico .exemplo { margin-top:auto; padding-top:14px; border-top:1px dashed var(--linha); display:flex; align-items:baseline; justify-content:space-between; gap:12px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+  .preco { flex:none; font-family:var(--font-lousa); font-size:28px; line-height:28px; color:var(--casca-texto); }
+  .entrega { margin-top:28px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 24px; padding:24px 28px; background:var(--casca-suave); border-radius:var(--raio-medio); }
+  .entrega p { max-width:620px; }
+  .nota-precos { margin-top:14px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+
+  /* Diferenciais */
+  .diferenciais { background:var(--verde-profundo); color:var(--creme); }
+  .diferenciais .cabeca h2 { color:var(--creme); }
+  .diferenciais .cabeca p { color:var(--creme); }
+  .selo-atributo { display:inline-flex; align-items:center; gap:8px; margin-bottom:14px; padding:6px 14px; border-radius:var(--raio-pilula); background:var(--jade-suave); color:var(--verde-profundo); font-size:14px; line-height:20px; font-weight:500; }
+  .selo-atributo .ko { font-size:12px; letter-spacing:.06em; color:var(--verde-boa); }
+  .grade-dif { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1px; background:rgba(158,214,192,.28); border:1px solid rgba(158,214,192,.28); border-radius:var(--raio-medio); overflow:hidden; }
+  @media (max-width:720px) { .grade-dif { grid-template-columns:minmax(0,1fr); } }
+  .dif { padding:32px; background:var(--verde-profundo); }
+  .dif h3 { color:var(--sobre-verde); font-size:24px; line-height:32px; }
+  .dif p { margin-top:10px; color:var(--creme); opacity:.92; }
+  .conservar { margin-top:28px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:20px; align-items:start; padding:24px 28px; border-radius:var(--raio-medio); background:var(--jade); color:var(--tinta); }
+  .conservar .lousa { font-family:var(--font-lousa); font-size:30px; line-height:32px; color:var(--verde-profundo); white-space:nowrap; }
+  @media (max-width:560px) { .conservar { grid-template-columns:minmax(0,1fr); gap:8px; } }
+
+  /* Depoimentos */
+  .depo .miolo { display:grid; grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr); gap:56px; align-items:start; }
+  .placar { display:grid; gap:16px; }
+  .placar .bloco { padding:20px 24px; background:var(--jade-suave); border-radius:var(--raio-medio); }
+  .placar .valor { font-family:var(--font-titulo); font-size:48px; line-height:52px; font-weight:700; color:var(--verde-profundo); }
+  .placar .fonte { margin-top:4px; font-size:14px; line-height:20px; font-weight:500; color:var(--verde-profundo); }
+  .placar .qtd { font-size:13px; line-height:20px; color:var(--tinta); }
+  .falas { display:grid; gap:28px; }
+  .fala { padding-left:24px; border-left:2px solid var(--linha); }
+  .fala blockquote { margin:0; font-family:var(--font-titulo); font-size:24px; line-height:34px; }
+  .fala p.relato { font-family:var(--font-titulo); font-size:20px; line-height:30px; }
+  .fala .quem { margin-top:8px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+
+  /* Localização */
+  .local .miolo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; align-items:stretch; }
+  .cartao-local { padding:32px; background:var(--creme-elevado); border:1px solid var(--linha); border-radius:var(--raio-medio); display:grid; gap:24px; align-content:start; }
+  .cartao-local h3 { font-size:22px; line-height:30px; }
+  .endereco { font-size:18px; line-height:30px; }
+  .horarios { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+  .horarios th, .horarios td { padding:10px 0; border-bottom:1px solid var(--linha); text-align:left; font-weight:400; vertical-align:top; }
+  .horarios td { text-align:right; }
+  .horarios tr:last-child th, .horarios tr:last-child td { border-bottom:0; }
+  .contatos { display:grid; gap:6px; }
+  .contatos span { color:var(--tinta-suave); font-size:14px; }
+  .contatos .numero { user-select:all; font-variant-numeric:tabular-nums; color:var(--tinta); font-size:16px; }
+  .mapa { position:relative; min-height:360px; border-radius:var(--raio-medio); overflow:hidden; background:var(--jade-suave); border:1px solid var(--linha); }
+  .mapa svg { position:absolute; inset:0; width:100%; height:100%; }
+  .mapa .alfinete { position:absolute; left:50%; top:46%; transform:translate(-50%,-100%); display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .mapa .alfinete .etiqueta { padding:6px 12px; border-radius:var(--raio-pequeno); background:var(--creme-elevado); border:1px solid var(--linha); font-size:13px; line-height:18px; font-weight:500; white-space:nowrap; }
+  .mapa .botao { position:absolute; left:20px; bottom:20px; }
+  .mapa .ref { position:absolute; right:20px; top:20px; font-size:12px; line-height:16px; color:var(--verde-profundo); font-weight:500; text-align:right; }
+
+  /* Rodapé */
+  .rodape { background:var(--verde-profundo); color:var(--creme); padding-block:48px calc(96px + env(safe-area-inset-bottom, 0px)); }
+  .rodape .miolo { display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px 48px; }
+  .rodape .marca { color:var(--creme); }
+  .rodape .nome small { color:var(--creme); opacity:.8; }
+  .rodape .selo { background:var(--creme); color:var(--verde-profundo); box-shadow:inset 0 0 0 2px var(--creme), inset 0 0 0 3px var(--jade); }
+  .rodape p, .rodape a { font-size:14px; line-height:22px; color:var(--creme); }
+  .rodape .col { display:grid; gap:4px; align-content:start; }
+  .rodape .legal { flex-basis:100%; padding-top:20px; border-top:1px solid rgba(250,246,238,.2); font-size:12px; line-height:18px; opacity:.8; }
+
+  /* Cardápio */
+  .alt { margin-top:14px; font-size:14px; line-height:22px; color:var(--tinta-suave); }
+  .alt a { color:var(--verde-boa); font-weight:500; }
+  .entrega h3 { font-size:22px; line-height:30px; margin-bottom:6px; }
+  .entrega .acoes { display:flex; flex-wrap:wrap; gap:12px; }
+  .entrega .alt { margin-top:8px; color:var(--tinta); }
+  .menu-topo { padding-block:56px 8px; }
+  .menu-topo h1 { font-size:48px; line-height:56px; }
+  .menu-topo .abertura { margin-top:14px; max-width:var(--largura-texto); font-size:18px; line-height:30px; }
+  .menu-topo .acoes { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+  .chips { position:sticky; top:calc(env(safe-area-inset-top, 0px) + var(--altura-topo, 73px)); z-index:15; background:var(--creme); border-bottom:1px solid var(--linha); }
+  @media (max-width:900px) {
+    .chips .miolo { padding-right:40px; -webkit-mask-image:linear-gradient(90deg, #000 calc(100% - 56px), transparent); mask-image:linear-gradient(90deg, #000 calc(100% - 56px), transparent); }
+    .chips .miolo.no-fim { -webkit-mask-image:none; mask-image:none; }
+  }
+  .chips .miolo { display:flex; gap:8px; overflow-x:auto; padding-block:12px; scrollbar-width:none; }
+  .chips a { flex:none; padding:7px 14px; border-radius:var(--raio-pilula); background:var(--jade-suave); color:var(--verde-profundo); font-size:14px; line-height:20px; font-weight:500; text-decoration:none; }
+  .chips a:hover { background:var(--jade); }
+  .chips, .chips a { transition:background-color .25s ease, color .25s ease, box-shadow .25s ease; }
+  .chips a.ativo { background:var(--verde-boa); color:var(--sobre-verde); }
+  .chips.fixo { background:var(--verde-profundo); border-bottom-color:var(--verde-profundo); box-shadow:0 8px 20px rgba(36,84,65,.22); }
+  .chips.fixo a { background:rgba(250,246,238,.12); color:var(--creme); }
+  .chips.fixo a:hover { background:rgba(250,246,238,.24); }
+  .chips.fixo a.ativo { background:var(--creme); color:var(--verde-profundo); }
+  .chips.fixo a:focus-visible { outline-color:var(--creme); }
+  .sentinela { height:1px; margin-bottom:-1px; }
+  @media (prefers-reduced-motion:reduce) { .chips, .chips a { transition:none; } }
+  .categoria { padding-block:40px; scroll-margin-top:calc(var(--altura-chips, 59px) - 3px); }
+  .categoria + .categoria { border-top:1px solid var(--linha); }
+  .categoria h2 { font-size:28px; line-height:36px; }
+  .categoria .sub { margin-top:6px; color:var(--tinta-suave); max-width:var(--largura-texto); }
+  .itens { list-style:none; margin:24px 0 0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:28px 20px; }
+  @media (max-width:1000px) { .itens { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+  @media (max-width:700px) { .itens { grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px 14px; } }
+  .item { display:flex; flex-direction:column; min-width:0; }
+  .foto { position:relative; aspect-ratio:1/1; max-width:100%; border-radius:var(--raio-medio); overflow:hidden; background-color:var(--casca-suave); background-image:linear-gradient(rgba(243,228,207,.55), rgba(243,228,207,.55)), var(--hanji); background-size:auto, 300px 300px; display:flex; align-items:flex-end; }
+  .foto img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .foto .aviso { margin:10px; padding:3px 10px; border-radius:var(--raio-pilula); background:var(--creme-elevado); color:var(--casca-texto); font-size:12px; line-height:18px; font-weight:500; }
+  .item .nome-item { display:block; margin-top:12px; font-weight:500; line-height:22px; }
+  .item small { display:block; margin-top:2px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+  .item .preco { margin-top:6px; font-size:26px; line-height:28px; }
+  .selo-mais { position:absolute; top:10px; left:10px; padding:2px 10px; border-radius:var(--raio-pilula); background:var(--verde-boa); color:var(--sobre-verde); font-size:12px; line-height:20px; font-weight:500; }
+  .sem-foto { margin-top:20px; display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding-block:14px; border-top:1px dashed var(--linha); border-bottom:1px dashed var(--linha); }
+  .destaques { padding-block:48px 8px; }
+  .destaques h2 { font-size:28px; line-height:36px; }
+  .grade-destaques { margin-top:28px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:32px; }
+  @media (max-width:760px) { .grade-destaques { grid-template-columns:minmax(0,1fr); gap:40px; } }
+  .destaque { text-align:center; }
+  .destaque .jarro-foto { position:relative; width:100%; max-width:360px; margin:0 auto; aspect-ratio:1/1; border-radius:20px; overflow:hidden; background-color:var(--casca-suave); background-image:linear-gradient(rgba(232,206,170,.6), rgba(232,206,170,.6)), var(--hanji); background-size:auto, 300px 300px; }
+  .destaque .jarro-foto img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .destaque .por-que { display:block; margin-top:14px; font-family:var(--font-lousa); font-size:24px; line-height:26px; color:var(--verde-boa); }
+  .destaque h3 { margin-top:4px; font-size:22px; line-height:30px; }
+  .destaque .preco { display:block; margin-top:4px; }
+  .ilustrativa { margin-top:8px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+  .menu-fim { margin-block:16px 80px; }
+  .topo nav a[aria-current="page"] { color:var(--verde-boa); }
+
+  /* Página inicial v3 */
+  .status { display:inline-flex; align-items:center; gap:8px; margin:0 0 18px; padding:6px 14px 6px 12px; border-radius:var(--raio-pilula); background:var(--creme-elevado); border:1px solid var(--linha); font-size:14px; line-height:20px; font-weight:500; color:var(--tinta); }
+  .status .ponto { flex:none; width:9px; height:9px; border-radius:50%; background:var(--tinta-suave); }
+  .status.aberto { color:var(--verde-profundo); border-color:var(--jade); }
+  .status.aberto .ponto { position:relative; background:#2E9E5B; }
+  .status.aberto .ponto::after { content:""; position:absolute; inset:0; border-radius:50%; background:#2E9E5B; animation:pulso 1.6s ease-out infinite; }
+  @keyframes pulso { 0% { transform:scale(1); opacity:.7; } 100% { transform:scale(2.8); opacity:0; } }
+  .status.fechado { color:#A8361F; border-color:#EBC3BA; background:#FFF6F3; }
+  .status.fechado .ponto { background:#C0392B; }
+  @media (prefers-reduced-motion:reduce) { .status.aberto .ponto::after { animation:none; opacity:0; } }
+  .status.breve .ponto { background:var(--casca); box-shadow:0 0 0 3px var(--casca-suave); }
+  .foto-slot { position:relative; width:100%; max-width:100%; border-radius:var(--raio-medio); overflow:hidden; background-color:var(--casca-suave); background-image:linear-gradient(rgba(232,206,170,.45), rgba(232,206,170,.45)), var(--hanji); background-size:auto, 300px 300px; display:flex; align-items:flex-end; }
+  .foto-slot.retrato { aspect-ratio:4/5; }
+  .foto-slot.paisagem { aspect-ratio:4/3; }
+  .foto-slot img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .hero .foto-slot img { object-position:50% 62%; }
+  .sobre-foto .foto-slot img { object-position:50% 68%; }
+  @media (max-width:860px) { .hero .foto-slot img { object-position:50% 78%; } }
+  .foto-slot.com-foto .aviso { background:rgba(255,253,248,.88); color:var(--tinta-suave); font-weight:400; }
+  .foto-slot .aviso { position:relative; margin:12px; padding:3px 10px; border-radius:var(--raio-pilula); background:var(--creme-elevado); color:var(--casca-texto); font-size:12px; line-height:18px; font-weight:500; }
+  .hero-foto { margin:0; width:100%; max-width:440px; justify-self:end; }
+  .como .miolo { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:56px; align-items:center; }
+  .como-visual { margin:0; }
+  .como-texto h2 { font-size:36px; line-height:44px; }
+  .como-texto .abertura { margin-top:14px; font-size:18px; line-height:30px; }
+  .itens-como { margin-top:28px; display:grid; gap:22px; }
+  .itens-como h3 { font-size:22px; line-height:30px; }
+  .itens-como p { margin-top:4px; }
+  .dica { margin-top:28px; padding:16px 22px; border-radius:var(--raio-medio); background:var(--jade-suave); font-size:15px; line-height:24px; }
+  .dica .lousa { font-family:var(--font-lousa); font-size:26px; line-height:26px; color:var(--verde-profundo); margin-right:6px; }
+  .sobre-foto { margin:0; width:100%; max-width:420px; }
+  .frase-dona { margin:28px 0 0; padding:4px 0 4px 22px; border-left:3px solid var(--jade); }
+  .frase-dona p { font-family:var(--font-titulo); font-size:24px; line-height:34px; color:var(--tinta); }
+  .ilustrativa-ia { display:block; margin-top:4px; font-size:12px; line-height:18px; font-style:italic; color:var(--tinta-suave); }
+  .frase-dona footer { margin-top:6px; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+  .falas-grade { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; }
+  .fala-card { margin:0; padding:24px; background:var(--creme-elevado); border:1px solid var(--linha); border-radius:var(--raio-medio); display:flex; flex-direction:column; gap:14px; }
+  .fala-card blockquote { margin:0; font-family:var(--font-titulo); font-size:22px; line-height:32px; }
+  .fala-card .relato { font-family:var(--font-titulo); font-size:18px; line-height:28px; }
+  .fala-card figcaption { margin-top:auto; font-size:13px; line-height:20px; color:var(--tinta-suave); }
+  .visite-topo { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr); gap:32px; align-items:end; margin-bottom:32px; }
+  .urgencia { padding:20px 24px; border-radius:var(--raio-medio); background:var(--casca-suave); }
+  .urgencia .lousa { display:block; font-family:var(--font-lousa); font-size:32px; line-height:34px; color:var(--casca-texto); }
+  .urgencia p { margin-top:6px; }
+  .fotos-visita { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; margin-bottom:24px; }
+  .local-grade { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; align-items:stretch; }
+  .rotas { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .horarios tr.hoje th, .horarios tr.hoje td { font-weight:700; color:var(--verde-profundo); }
+  .mapa iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .mapa-reserva { position:absolute; inset:0; }
+  .mapa-nota { position:absolute; left:16px; right:16px; bottom:16px; padding:8px 12px; border-radius:var(--raio-pequeno); background:var(--creme-elevado); font-size:13px; line-height:18px; color:var(--tinta-suave); text-align:center; }
+  #destaques .grade-destaques { margin-top:0; margin-bottom:32px; }
+  #depoimentos .miolo { display:block; }
+  #depoimentos .botao { display:inline-flex; }
+  .estrelas { --tam:16px; display:inline-block; flex:none; width:calc(var(--tam) * 5); height:var(--tam); background:linear-gradient(90deg, var(--casca) var(--pct, 100%), var(--linha) var(--pct, 100%)); -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z'/%3E%3C/svg%3E") repeat-x 0 0 / var(--tam) var(--tam); mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z'/%3E%3C/svg%3E") repeat-x 0 0 / var(--tam) var(--tam); }
+  .nota { align-items:center; flex-wrap:wrap; row-gap:2px; }
+  @media (max-width:420px) { .nota span:last-child { flex-basis:100%; font-size:13px; } .notas { gap:14px 24px; } }
+  .nota .estrelas { --tam:15px; }
+  .fala-card .estrelas { --tam:18px; }
+  @media (max-width:860px) {
+    .como .miolo, .visite-topo, .local-grade, .falas-grade { grid-template-columns:minmax(0,1fr); gap:28px; }
+    .hero-foto { justify-self:start; }
+    .como-visual .jarro { max-width:260px; }
+  }
+  @media (max-width:700px) {
+    .fotos-visita { grid-template-columns:repeat(2, minmax(0,1fr)); }
+    .fotos-visita .foto-slot:first-child { grid-column:1 / -1; }
+  }
+
+  /* WhatsApp */
+  .whats { position:fixed; z-index:30; right:calc(20px + env(safe-area-inset-right, 0px)); bottom:calc(20px + env(safe-area-inset-bottom, 0px)); display:inline-flex; align-items:center; gap:10px; padding:14px 20px 14px 16px; border-radius:var(--raio-pilula); background:var(--verde-boa); color:var(--sobre-verde); text-decoration:none; font-size:15px; line-height:20px; font-weight:500; box-shadow:0 6px 18px rgba(36,84,65,.28); }
+  .whats:hover { background:var(--verde-profundo); }
+  .whats svg { width:22px; height:22px; flex:none; }
+
+  @media (max-width:860px) {
+    .secao { padding-block:56px; }
+    .hero { padding-block:40px 56px; }
+    .hero .miolo, .sobre .miolo, .depo .miolo, .local .miolo { grid-template-columns:minmax(0,1fr); gap:36px; }
+    .hero h1 { font-size:38px; line-height:46px; }
+    .cabeca h2 { font-size:30px; line-height:38px; }
+    .jarro { max-width:320px; }
+    .mapa { min-height:280px; }
+  }
+  /* Menu no celular, pular conteúdo, FAQ, carrossel */
+  .pular { position:absolute; left:-9999px; top:0; z-index:60; padding:10px 16px; border-radius:var(--raio-pequeno); background:var(--verde-profundo); color:var(--sobre-verde); font-weight:500; text-decoration:none; }
+  .pular:focus { left:max(16px, env(safe-area-inset-left, 0px)); top:calc(8px + env(safe-area-inset-top, 0px)); }
+  .acoes-topo { display:flex; align-items:center; gap:8px; }
+  .abrir-menu { display:none; align-items:center; justify-content:center; gap:8px; min-height:42px; min-width:44px; padding:9px 14px; border-radius:var(--raio-pilula); border:2px solid var(--verde-boa); background:transparent; color:var(--verde-boa); font:500 14px/20px var(--font-texto); cursor:pointer; }
+  .abrir-menu .barras { position:relative; width:16px; height:2px; background:currentColor; border-radius:2px; }
+  .abrir-menu .barras::before, .abrir-menu .barras::after { content:""; position:absolute; left:0; width:16px; height:2px; background:currentColor; border-radius:2px; transition:transform .2s ease, top .2s ease; }
+  .abrir-menu .barras::before { top:-5px; } .abrir-menu .barras::after { top:5px; }
+  .abrir-menu[aria-expanded="true"] .barras { background:transparent; }
+  .abrir-menu[aria-expanded="true"] .barras::before { top:0; transform:rotate(45deg); }
+  .abrir-menu[aria-expanded="true"] .barras::after { top:0; transform:rotate(-45deg); }
+  .topo nav.menu-movel { display:block; border-top:1px solid var(--linha); background:var(--creme); }
+  .topo nav.menu-movel[hidden] { display:none; }
+  .menu-movel .miolo { display:grid; gap:2px; padding-block:8px 20px; }
+  .menu-movel a.link { display:block; padding:12px 0; border-bottom:1px solid var(--linha); color:var(--tinta); text-decoration:none; font-family:var(--font-titulo); font-size:20px; line-height:28px; }
+  .menu-movel .botao { margin-top:14px; justify-self:start; }
+  @media (max-width:900px) { .abrir-menu { display:inline-flex; } }
+  @media (min-width:901px) { .menu-movel { display:none !important; } }
+  @media (max-width:420px) {
+    .topo .nome small { display:none; }
+    .topo .nome { font-size:16px; line-height:19px; }
+    .abrir-menu .rotulo { display:none; }
+    .abrir-menu { padding:9px 12px; }
+    .whats span { display:none; }
+    .whats { padding:14px; }
+  }
+  .whats { transition:opacity .2s ease, transform .2s ease; }
+  .whats.some { opacity:0; pointer-events:none; transform:translateY(12px); }
+  @media (prefers-reduced-motion:reduce) { .whats, .abrir-menu .barras::before, .abrir-menu .barras::after { transition:none; } }
+  .lista-faq { max-width:var(--largura-texto); display:grid; gap:12px; }
+  .lista-faq details { background:var(--creme-elevado); border:1px solid var(--linha); border-radius:var(--raio-medio); }
+  .lista-faq summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 22px; font-family:var(--font-titulo); font-size:20px; line-height:28px; font-weight:700; }
+  .lista-faq summary::-webkit-details-marker { display:none; }
+  .lista-faq summary::after { content:"+"; flex:none; font-family:var(--font-texto); font-weight:400; font-size:24px; color:var(--verde-boa); }
+  .lista-faq details[open] summary::after { content:"\2212"; }
+  .lista-faq details p { padding:0 22px 20px; }
+  .dica-arraste { display:none; margin-top:-16px; margin-bottom:20px; font-size:13px; color:var(--tinta-suave); }
+  @media (max-width:860px) {
+    .hero .foto-slot.retrato, .sobre-foto .foto-slot.retrato { aspect-ratio:4/3; }
+    .sobre-foto { max-width:none; }
+  }
+  @media (max-width:760px) {
+    .grade-destaques { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:16px; padding-bottom:8px; scrollbar-width:thin; }
+    .grade-destaques .destaque { flex:0 0 72%; scroll-snap-align:start; }
+    .destaque .jarro-foto { max-width:none; }
+    .dica-arraste { display:block; }
+  }
+</style>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo faixa">
+  <div class="miolo">
+    <a class="marca" href="#inicio">
+      <span class="selo" lang="ko" title="보아, Boa">보아</span>
+      <span class="nome">Boa&nbsp;Artisan Bakery<small>Padaria artesanal em Moema</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#cardapio" data-menu>Cardápio</a>
+      <a href="#como-fazemos">Como fazemos</a>
+      <a href="#sobre">Nossa história</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#visite">Visite a loja</a>
+    </nav>
+    <div class="acoes-topo">
+      <a class="botao primario pequeno" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar</a>
+      <button class="abrir-menu" type="button" aria-expanded="false" aria-controls="menu-movel" aria-label="Abrir menu"><span class="barras" aria-hidden="true"></span><span class="rotulo">Menu</span></button>
+    </div>
+  </div>
+  <nav id="menu-movel" class="menu-movel faixa" aria-label="Menu" hidden>
+    <div class="miolo">
+      <a class="link" href="#cardapio">Cardápio</a>
+      <a class="link" href="#como-fazemos">Como fazemos</a>
+      <a class="link" href="#sobre">Nossa história</a>
+      <a class="link" href="#depoimentos">Avaliações</a>
+      <a class="link" href="#visite">Visite a loja</a>
+      <a class="link" href="#perguntas">Perguntas frequentes</a>
+      <a class="botao primario" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo">
+<div id="inicio" class="vista">
+  <section class="hero faixa hanji" aria-labelledby="titulo-hero">
+    <div class="miolo">
+      <div>
+        <p class="status" id="status"><span class="ponto" aria-hidden="true"></span><span class="txt">Terça a domingo, a partir das 7h30</span></p>
+        <h1 id="titulo-hero">Pão de fermentação natural, feito todo dia em Moema</h1>
+        <p class="abertura">Somos uma padaria de origem coreana na Alameda dos Jurupis. Cada fornada é feita para o dia, e os pães mais pedidos costumam acabar primeiro, principalmente no fim de semana. Venha cedo ou garanta o seu pelo WhatsApp.</p>
+        <div class="acoes">
+          <a class="botao primario" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Garantir o meu pelo WhatsApp</a>
+          <a class="botao secundario" href="#cardapio">Ver cardápio</a>
+        </div>
+        <p class="alt">Prefere receber em casa agora? <a href="https://www.ifood.com.br/busca?q=Boa%20Artisan%20Bakery%20Moema" target="_blank" rel="noopener">Peça pelo iFood</a>.</p>
+        <div class="notas" aria-label="Avaliações">
+          <div class="nota"><strong>4,6</strong><span class="estrelas" style="--pct:92%" role="img" aria-label="4,6 de 5 estrelas"></span><span>no Google, 380 avaliações</span></div>
+          <div class="nota"><strong>5,0</strong><span class="estrelas" style="--pct:100%" role="img" aria-label="5 de 5 estrelas"></span><span>no iFood, 130 avaliações</span></div>
+        </div>
+      </div>
+      <figure class="hero-foto">
+        <div class="foto-slot retrato com-foto" data-foto="hero-vitrine-manha"><img src="/img/hero-vitrine-manha.webp" srcset="/img/hero-vitrine-manha-480.webp 480w, /img/hero-vitrine-manha-720.webp 720w, /img/hero-vitrine-manha.webp 1024w" sizes="(max-width: 860px) calc(100vw - 32px), 440px" width="1024" height="1536" alt="Vitrine de padaria cheia pela manhã, com croissants, pães redondos, baguetes, brioches, cinnamon rolls e focaccias de tomate"><span class="aviso">Imagem ilustrativa</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="destaques" class="secao faixa" aria-labelledby="titulo-destaques">
+    <div class="miolo">
+      <div class="cabeca">
+        <span class="rotulo-ko" lang="ko">메뉴</span>
+        <h2 id="titulo-destaques">Os favoritos da vitrine</h2>
+        <p>Os três que os clientes mais elogiam. Para garantir o seu, encomende antes de vir.</p>
+      </div>
+      <p class="dica-arraste" aria-hidden="true">Arraste para o lado para ver os três.</p>
+      <div class="grade-destaques">
+        <article class="destaque">
+          <div class="jarro-foto" data-foto="croissant-de-amendoa-destaque"><img src="/img/croissant-de-amendoa.webp" srcset="/img/croissant-de-amendoa-480.webp 480w, /img/croissant-de-amendoa.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Croissant de amêndoa coberto com lâminas de amêndoa e açúcar de confeiteiro, sobre tábua de madeira" loading="lazy"></div>
+          <span class="por-que">O mais pedido</span>
+          <h3>Croissant de amêndoa</h3>
+          <span class="preco">R$ 24</span>
+        </article>
+        <article class="destaque">
+          <div class="jarro-foto" data-foto="pao-da-casa-com-queijo-e-manjericao-destaque"><img src="/img/pao-da-casa-com-queijo-e-manjericao.webp" srcset="/img/pao-da-casa-com-queijo-e-manjericao-480.webp 480w, /img/pao-da-casa-com-queijo-e-manjericao.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Pão da Casa redondo com queijo gratinado e manjericão, com uma fatia ao lado mostrando o miolo" loading="lazy"></div>
+          <span class="por-que">O queridinho da casa</span>
+          <h3>Pão da Casa com queijo e manjericão</h3>
+          <span class="preco">R$ 30</span>
+        </article>
+        <article class="destaque">
+          <div class="jarro-foto" data-foto="cinnamon-roll-destaque"><img src="/img/cinnamon-roll.webp" srcset="/img/cinnamon-roll-480.webp 480w, /img/cinnamon-roll.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Cinnamon roll com espiral de canela e um fio de glacê, sobre tábua de madeira" loading="lazy"></div>
+          <span class="por-que">Dos mais elogiados</span>
+          <h3>Cinnamon roll</h3>
+          <span class="preco">R$ 14</span>
+        </article>
+      </div>
+      <p class="ilustrativa" style="margin:-16px 0 24px">Imagens ilustrativas.</p>
+      <div class="entrega">
+        <div>
+          <h3>Encomende e retire sem correr o risco de não ter</h3>
+          <p>Mande uma mensagem, combine o horário e o seu pedido fica separado na loja. A encomenda é feita direto com a padaria, sem taxa de aplicativo.</p>
+          <p class="alt">Para receber em casa, estamos no <a href="https://www.ifood.com.br/busca?q=Boa%20Artisan%20Bakery%20Moema" target="_blank" rel="noopener">iFood</a>, com pedido mínimo de R$ 30 e agendamento.</p>
+        </div>
+        <div class="acoes">
+          <a class="botao primario" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+          <a class="botao secundario" href="#cardapio">Ver cardápio completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-fazemos" class="secao como faixa hanji" aria-labelledby="titulo-como">
+    <div class="miolo">
+      <figure class="como-visual">
+        <div class="jarro" role="img" aria-label="Jarro-lua com a palavra coreana ppang, que quer dizer pão">
+          <span class="ppang" lang="ko">빵</span>
+          <span class="leitura">ppang</span>
+        </div>
+      </figure>
+      <div class="como-texto">
+        <span class="selo-atributo"><span class="ko" lang="ko">자연 발효</span>Fermentação natural</span>
+        <h2 id="titulo-como">Uma padaria coreana que fala português</h2>
+        <p class="abertura">Em coreano, pão se diz 빵 (<em>ppang</em>). A palavra saiu do português, chegou ao Japão no século XVI com comerciantes e missionários e de lá passou para a Coreia. Séculos depois, uma padaria coreana faz pão em Moema e junta as duas tradições na mesma vitrine.</p>
+        <div class="itens-como">
+          <div>
+            <h3>O brioche que fica macio por dias</h3>
+            <p>Parte da farinha é cozida antes de entrar na massa, uma técnica asiática que segura a umidade. Por isso ele continua macio dois ou três dias depois de sair do forno.</p>
+          </div>
+          <div>
+            <h3>Croissant com manteiga da França</h3>
+            <p>A manteiga é importada. O croissant sai crocante por fora e macio por dentro, e vem em onze versões, do tradicional ao de abacate.</p>
+          </div>
+          <div>
+            <h3>Tempo no lugar de conservante</h3>
+            <p>A massa descansa por muitas horas antes de ir ao forno. Não usamos conservantes, aditivos químicos nem condicionadores.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="secao sobre faixa" aria-labelledby="titulo-sobre">
+    <div class="miolo">
+      <figure class="sobre-foto">
+        <div class="foto-slot retrato com-foto" data-foto="dona-na-producao"><img src="/img/producao-bancada.webp" srcset="/img/producao-bancada-720.webp 720w, /img/producao-bancada.webp 1024w" sizes="(max-width: 860px) 100vw, 420px" width="1024" height="1536" alt="Bancada de produção enfarinhada antes do amanhecer, com pães modelados descansando, cestos de fermentação e o forno ao fundo" loading="lazy"><span class="aviso">Imagem ilustrativa</span></div>
+      </figure>
+      <div>
+        <div class="cabeca" style="margin-bottom:20px">
+          <span class="rotulo-ko" lang="ko">우리 이야기</span>
+          <h2 id="titulo-sobre">Nossa história</h2>
+        </div>
+        <div class="texto">
+          <p>A Boa Artisan Bakery começou como Joa Artisan Bakery, numa loja no Bom Retiro, o bairro coreano de São Paulo. Em janeiro de 2019 veio para Moema, perto do Shopping Ibirapuera.</p>
+          <p>Em 2023 a casa ganhou o nome Boa, para atrair coisas boas. As receitas e o cuidado continuaram os mesmos.</p>
+        </div>
+        <blockquote class="frase-dona">
+          <p>"Moema virou a nossa casa. Muita gente que entra aqui já virou vizinho."</p>
+          <footer>Nan A Song, quem cuida da Boa Artisan Bakery</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="secao depo faixa hanji" aria-labelledby="titulo-depo">
+    <div class="miolo">
+      <div class="cabeca">
+        <h2 id="titulo-depo">Quem prova volta</h2>
+        <p>Algumas das avaliações que recebemos no iFood este ano.</p>
+      </div>
+      <div class="falas-grade">
+        <figure class="fala-card">
+          <span class="estrelas" role="img" aria-label="Nota 5 de 5"></span>
+          <blockquote>"Como sempre, pão fresquinho e delicioso."</blockquote>
+          <figcaption>Priscila, iFood, agosto de 2026</figcaption>
+        </figure>
+        <figure class="fala-card">
+          <span class="estrelas" role="img" aria-label="Nota 5 de 5"></span>
+          <p class="relato">Os pães chegaram quentinhos e a omelete veio no ponto. Ela elogiou a embalagem e disse que a qualidade se mantém pedido após pedido.</p>
+          <figcaption>Maria, iFood, setembro de 2026</figcaption>
+        </figure>
+        <figure class="fala-card">
+          <span class="estrelas" role="img" aria-label="Nota 5 de 5"></span>
+          <p class="relato">Achou a focaccia deliciosa e bem servida.</p>
+          <figcaption>Kenji, iFood, setembro de 2026</figcaption>
+        </figure>
+      </div>
+      <a class="botao secundario" style="margin-top:28px" href="https://www.google.com/maps/search/?api=1&amp;query=Boa%20Artisan%20Bakery%20Alameda%20dos%20Jurupis%20421" target="_blank" rel="noopener">Ler as avaliações no Google</a>
+    </div>
+  </section>
+
+  <section id="visite" class="secao visite faixa" aria-labelledby="titulo-visite">
+    <div class="miolo">
+      <div class="visite-topo">
+        <div class="cabeca" style="margin-bottom:0">
+          <h2 id="titulo-visite">Venha tomar café com a gente</h2>
+          <p>Tem mesa para o café da manhã e para um lanche à tarde. O Grande da Casa serve duas pessoas e traz seis fatias de pão, ovo mexido, iogurte, suco de laranja, geleia e manteiga.</p>
+        </div>
+        <div class="urgencia">
+          <span class="lousa">Chegue cedo</span>
+          <p>Os pães são feitos para o dia. Quando acabam, só na próxima fornada. Aos sábados e domingos a loja fecha ao meio-dia.</p>
+        </div>
+      </div>
+      <div class="fotos-visita">
+        <div class="foto-slot paisagem com-foto" data-foto="fachada"><img src="/img/fachada.webp" srcset="/img/fachada-720.webp 720w, /img/fachada.webp 1200w" sizes="(max-width: 700px) 100vw, 360px" width="1200" height="800" alt="Fachada de padaria de bairro numa rua arborizada, de manhã, com pães na vitrine e a porta entreaberta" loading="lazy"><span class="aviso">Imagem ilustrativa</span></div>
+        <div class="foto-slot paisagem com-foto" data-foto="mesa-cafe-da-manha"><img src="/img/mesa-cafe-da-manha.webp" srcset="/img/mesa-cafe-da-manha-720.webp 720w, /img/mesa-cafe-da-manha.webp 1200w" sizes="(max-width: 700px) 50vw, 360px" width="1200" height="800" alt="Café da manhã para dois numa mesa junto à janela, com fatias de pão, ovos mexidos, iogurte com granola, sucos, manteiga, geleia e dois espressos" loading="lazy"><span class="aviso">Imagem ilustrativa</span></div>
+        <div class="foto-slot paisagem com-foto" data-foto="salao"><img src="/img/salao.webp" srcset="/img/salao-720.webp 720w, /img/salao.webp 1200w" sizes="(max-width: 700px) 50vw, 360px" width="1200" height="800" alt="Salão de padaria com mesas de madeira, parede de plantas, prateleiras de pães e vitrine de croissants ao fundo" loading="lazy"><span class="aviso">Imagem ilustrativa</span></div>
+      </div>
+      <div class="local-grade">
+        <div class="cartao-local">
+          <div>
+            <h3>Endereço</h3>
+            <p class="endereco">Alameda dos Jurupis, 421<br>Moema, São Paulo, SP · CEP 04088-000</p>
+            <div class="rotas">
+              <a class="botao primario" href="https://www.google.com/maps/dir/?api=1&amp;destination=Alameda%20dos%20Jurupis%2C%20421%2C%20Moema%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Traçar rota</a>
+              <a class="botao secundario" href="https://waze.com/ul?q=Alameda%20dos%20Jurupis%20421%20Moema%20S%C3%A3o%20Paulo&amp;navigate=yes" target="_blank" rel="noopener">Abrir no Waze</a>
+            </div>
+          </div>
+          <div>
+            <h3>Horário</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dias="2,3,4,5"><th scope="row">Terça a sexta</th><td>7h30 às 18h30</td></tr>
+                <tr data-dias="6,0"><th scope="row">Sábado, domingo e feriado</th><td>7h30 às 12h</td></tr>
+                <tr data-dias="1"><th scope="row">Segunda</th><td>Fechado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="contatos">
+            <span>Telefone</span><span class="numero">(11) 5052-5302</span>
+            <span style="margin-top:8px">WhatsApp</span><span class="numero">(11) 96844-3146</span>
+          </div>
+        </div>
+        <div class="mapa" id="mapa" data-consulta="Boa Artisan Bakery, Alameda dos Jurupis, 421, Moema, São Paulo">
+          <iframe id="mapa-google" title="Mapa da Boa Artisan Bakery no Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen hidden></iframe>
+          <div class="mapa-reserva" id="mapa-reserva">
+            <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="600" height="420" fill="#E4F1EB"/>
+              <g stroke="#FFFDF8" stroke-linecap="round" fill="none">
+                <path d="M-20 300 L640 140" stroke-width="22"/>
+                <path d="M120 -20 L230 440" stroke-width="14"/>
+                <path d="M380 -20 L460 440" stroke-width="14"/>
+                <path d="M-20 90 L640 40" stroke-width="10"/>
+                <path d="M-20 380 L640 330" stroke-width="10"/>
+                <path d="M40 190 L600 120" stroke-width="8"/>
+              </g>
+            </svg>
+            <div class="alfinete"><span class="etiqueta">Boa Artisan Bakery</span><span class="selo" lang="ko">빵</span></div>
+            <span class="mapa-nota">O mapa interativo do Google aparece aqui no site publicado.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="perguntas" class="secao faq faixa hanji" aria-labelledby="titulo-faq">
+    <div class="miolo">
+      <div class="cabeca"><h2 id="titulo-faq">Perguntas frequentes</h2></div>
+      <div class="lista-faq"><details><summary>Como faço uma encomenda?</summary><p>Mande uma mensagem pelo WhatsApp, no (11) 96844-3146, dizendo o que quer e o dia da retirada. A gente confirma e deixa o pedido separado na loja, sem taxa de aplicativo.</p></details><details><summary>Vocês fazem entrega?</summary><p>Sim, pelo iFood, com pedido mínimo de R$ 30. Dá para agendar o pedido para a hora do café. O horário de entrega no aplicativo pode ser diferente do horário da loja.</p></details><details><summary>Como conservar o pão?</summary><p>Como não leva conservantes, o pão começa a secar a partir do terceiro dia. Dá para congelar inteiro ou fatiado por cerca de um mês. Na hora de comer, aqueça no forno ou numa frigideira, e ele volta crocante.</p></details><details><summary>Qual é o horário nos feriados?</summary><p>Nos feriados abrimos das 7h30 às 12h, como aos sábados e domingos. Às segundas a loja fica fechada.</p></details><details><summary>A Boa Artisan Bakery é a antiga Joa de Moema?</summary><p>Sim. A loja da Alameda dos Jurupis se chamava Joa Artisan Bakery e passou a se chamar Boa em janeiro de 2023. No iFood, ela aparece como Boa Artisan Bakery Moema; no Instagram, como Boa Pães Artesanais.</p></details></div>
+    </div>
+  </section>
+</div>
+
+<div id="cardapio" class="vista" hidden>
+  <section class="menu-topo faixa hanji" aria-labelledby="titulo-cardapio">
+    <div class="miolo">
+      <span class="rotulo-ko" lang="ko">메뉴</span>
+      <h1 id="titulo-cardapio">Cardápio</h1>
+      <p class="abertura">Tudo o que sai do forno da Boa Artisan Bakery, com os preços de outubro de 2026. Alguns pães esgotam cedo, principalmente no fim de semana. Para garantir o seu, encomende pelo WhatsApp.</p>
+      <div class="acoes">
+        <a class="botao primario" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+        <a class="botao secundario" href="https://www.ifood.com.br/busca?q=Boa%20Artisan%20Bakery%20Moema" target="_blank" rel="noopener">Pedir pelo iFood</a>
+      </div>
+      <div style="height:32px"></div>
+    </div>
+  </section>
+  <div class="sentinela" aria-hidden="true"></div>
+  <nav class="chips faixa" aria-label="Categorias do cardápio"><div class="miolo"><a href="#cardapio-paes">Pães</a><a href="#cardapio-integrais">Pães integrais</a><a href="#cardapio-croissants">Croissants</a><a href="#cardapio-focaccias">Focaccias</a><a href="#cardapio-doces">Doces</a><a href="#cardapio-cafe">Café da manhã e lanches</a><a href="#cardapio-bebidas">Bebidas</a></div></nav>
+  <div class="faixa"><div class="miolo">
+<section class="destaques" aria-labelledby="t-destaques"><h2 id="t-destaques">Destaques da casa</h2><div class="grade-destaques"><article class="destaque"><div class="jarro-foto" data-foto="croissant-de-amendoa-destaque"><img src="/img/croissant-de-amendoa.webp" srcset="/img/croissant-de-amendoa-480.webp 480w, /img/croissant-de-amendoa.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Croissant de amêndoa coberto com lâminas de amêndoa e açúcar de confeiteiro, sobre tábua de madeira" loading="lazy"></div><span class="por-que">O mais pedido</span><h3>Croissant de amêndoa</h3><span class="preco">R$ 24</span></article><article class="destaque"><div class="jarro-foto" data-foto="pao-da-casa-com-queijo-e-manjericao-destaque"><img src="/img/pao-da-casa-com-queijo-e-manjericao.webp" srcset="/img/pao-da-casa-com-queijo-e-manjericao-480.webp 480w, /img/pao-da-casa-com-queijo-e-manjericao.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Pão da Casa redondo com queijo gratinado e manjericão, com uma fatia ao lado mostrando o miolo" loading="lazy"></div><span class="por-que">O queridinho da casa</span><h3>Pão da Casa com queijo e manjericão</h3><span class="preco">R$ 30</span></article><article class="destaque"><div class="jarro-foto" data-foto="cinnamon-roll-destaque"><img src="/img/cinnamon-roll.webp" srcset="/img/cinnamon-roll-480.webp 480w, /img/cinnamon-roll.webp 800w" sizes="(max-width: 760px) 72vw, 360px" width="800" height="800" alt="Cinnamon roll com espiral de canela e um fio de glacê, sobre tábua de madeira" loading="lazy"></div><span class="por-que">Dos mais elogiados</span><h3>Cinnamon roll</h3><span class="preco">R$ 14</span></article></div></section>
+<section id="cardapio-paes" class="categoria" aria-labelledby="t-paes"><h2 id="t-paes">Pães</h2><p class="sub">Fermentação natural, sem conservantes. Feitos todos os dias.</p><ul class="itens"><li class="item"><div class="foto" data-foto="pao-da-casa-com-alecrim"><img src="/img/pao-da-casa-com-alecrim.webp" srcset="/img/pao-da-casa-com-alecrim-480.webp 480w, /img/pao-da-casa-com-alecrim.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão da Casa redondo com alecrim e sal grosso na casca, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Pão da Casa com alecrim</span><small>250 g, massa branca</small><span class="preco">R$ 27</span></li><li class="item"><div class="foto" data-foto="pao-da-casa-com-queijo-e-manjericao"><img src="/img/pao-da-casa-com-queijo-e-manjericao.webp" srcset="/img/pao-da-casa-com-queijo-e-manjericao-480.webp 480w, /img/pao-da-casa-com-queijo-e-manjericao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão da Casa redondo com queijo gratinado e manjericão, com uma fatia ao lado mostrando o miolo" loading="lazy"></div><span class="nome-item">Pão da Casa com queijo e manjericão</span><small>250 g</small><span class="preco">R$ 30</span></li><li class="item"><div class="foto" data-foto="pao-da-casa-com-azeitona-preta"><img src="/img/pao-da-casa-com-azeitona-preta.webp" srcset="/img/pao-da-casa-com-azeitona-preta-480.webp 480w, /img/pao-da-casa-com-azeitona-preta.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão da Casa com azeitonas pretas, aberto numa ponta, com uma fatia ao lado mostrando o miolo" loading="lazy"></div><span class="nome-item">Pão da Casa com azeitona preta</span><span class="preco">R$ 27</span></li><li class="item"><div class="foto" data-foto="paozinho-da-casa"><img src="/img/paozinho-da-casa.webp" srcset="/img/paozinho-da-casa-480.webp 480w, /img/paozinho-da-casa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pãozinho da casa, uma mini baguete de casca dourada com cortes na diagonal, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Pãozinho da casa</span><small>250 g, mini baguete</small><span class="preco">R$ 21</span></li><li class="item"><div class="foto" data-foto="baguete"><img src="/img/baguete.webp" srcset="/img/baguete-480.webp 480w, /img/baguete.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Baguete de fermentação natural com cinco cortes, na diagonal de uma tábua de madeira" loading="lazy"></div><span class="nome-item">Baguete</span><small>450 g</small><span class="preco">R$ 33</span></li><li class="item"><div class="foto" data-foto="ciabatta-tradicional"><img src="/img/ciabatta-tradicional.webp" srcset="/img/ciabatta-tradicional-480.webp 480w, /img/ciabatta-tradicional.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Ciabatta enfarinhada com uma ponta cortada mostrando o miolo aerado, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Ciabatta tradicional</span><span class="preco">R$ 21</span></li><li class="item"><div class="foto" data-foto="ciabatta-com-azeitona-verde"><img src="/img/ciabatta-com-azeitona-verde.webp" srcset="/img/ciabatta-com-azeitona-verde-480.webp 480w, /img/ciabatta-com-azeitona-verde.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Ciabatta com azeitonas verdes na casca e no miolo, com uma ponta cortada, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Ciabatta com azeitona verde</span><small>250 g</small><span class="preco">R$ 27</span></li><li class="item"><div class="foto" data-foto="ciabatta-com-parmesao"><img src="/img/ciabatta-com-parmesao.webp" srcset="/img/ciabatta-com-parmesao-480.webp 480w, /img/ciabatta-com-parmesao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Ciabatta coberta com parmesão gratinado, com uma ponta cortada mostrando o miolo, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Ciabatta com parmesão</span><small>250 g</small><span class="preco">R$ 27</span></li><li class="item"><div class="foto" data-foto="brioche"><img src="/img/brioche.webp" srcset="/img/brioche-480.webp 480w, /img/brioche.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Brioche de forma com gomos dourados, cortado numa ponta, com duas fatias ao lado mostrando o miolo macio" loading="lazy"></div><span class="nome-item">Brioche</span><small>600 g, massa cozida que fica macia por dias</small><span class="preco">R$ 46</span></li><li class="item"><div class="foto" data-foto="mini-brioche"><img src="/img/mini-brioche.webp" srcset="/img/mini-brioche-480.webp 480w, /img/mini-brioche.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Mini brioche redondo e dourado, com uma bolinha no topo, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Mini brioche</span><span class="preco">R$ 26</span></li></ul></section>
+<section id="cardapio-integrais" class="categoria" aria-labelledby="t-integrais"><h2 id="t-integrais">Pães integrais</h2><ul class="itens"><li class="item"><div class="foto" data-foto="baguete-integral"><img src="/img/baguete-integral.webp" srcset="/img/baguete-integral-480.webp 480w, /img/baguete-integral.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Baguete integral de casca marrom com cortes na diagonal, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Baguete integral</span><small>450 g</small><span class="preco">R$ 33</span></li><li class="item"><div class="foto" data-foto="integral-com-multigraos"><img src="/img/integral-com-multigraos.webp" srcset="/img/integral-com-multigraos-480.webp 480w, /img/integral-com-multigraos.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão integral coberto de sementes e aveia, cortado numa ponta, com uma fatia ao lado mostrando o miolo" loading="lazy"></div><span class="nome-item">Integral com multigrãos</span><small>480 g</small><span class="preco">R$ 39</span></li><li class="item"><div class="foto" data-foto="integral-com-mix-de-castanhas"><img src="/img/integral-com-mix-de-castanhas.webp" srcset="/img/integral-com-mix-de-castanhas-480.webp 480w, /img/integral-com-mix-de-castanhas.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão integral com castanha-do-pará, nozes e sementes, cortado numa ponta, com uma fatia ao lado" loading="lazy"></div><span class="nome-item">Integral com mix de castanhas</span><span class="preco">R$ 27</span></li><li class="item"><div class="foto" data-foto="integral-com-alecrim"><img src="/img/integral-com-alecrim.webp" srcset="/img/integral-com-alecrim-480.webp 480w, /img/integral-com-alecrim.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pão integral redondo com alecrim e sal grosso na casca, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Integral com alecrim</span><span class="preco">R$ 27</span></li></ul></section>
+<section id="cardapio-croissants" class="categoria" aria-labelledby="t-croissants"><h2 id="t-croissants">Croissants</h2><p class="sub">Feitos com manteiga francesa importada.</p><ul class="itens"><li class="item"><div class="foto" data-foto="croissant-tradicional"><img src="/img/croissant-tradicional.webp" srcset="/img/croissant-tradicional-480.webp 480w, /img/croissant-tradicional.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant tradicional de manteiga com camadas folhadas aparentes, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Croissant tradicional</span><span class="preco">R$ 16,50</span></li><li class="item"><div class="foto" data-foto="croissant-de-amendoa"><img src="/img/croissant-de-amendoa.webp" srcset="/img/croissant-de-amendoa-480.webp 480w, /img/croissant-de-amendoa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de amêndoa coberto com lâminas de amêndoa e açúcar de confeiteiro, sobre tábua de madeira" loading="lazy"><span class="selo-mais">Mais pedido</span></div><span class="nome-item">Croissant de amêndoa</span><span class="preco">R$ 24</span></li><li class="item"><div class="foto" data-foto="croissant-de-chocolate"><img src="/img/croissant-de-chocolate.webp" srcset="/img/croissant-de-chocolate-480.webp 480w, /img/croissant-de-chocolate.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de chocolate cortado ao meio, mostrando as camadas folhadas e o recheio de chocolate" loading="lazy"></div><span class="nome-item">Croissant de chocolate</span><span class="preco">R$ 20</span></li><li class="item"><div class="foto" data-foto="croissant-de-queijo"><img src="/img/croissant-de-queijo.webp" srcset="/img/croissant-de-queijo-480.webp 480w, /img/croissant-de-queijo.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de queijo gratinado por cima, cortado ao meio mostrando o queijo derretido por dentro" loading="lazy"></div><span class="nome-item">Croissant de queijo</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-presunto-e-queijo"><img src="/img/croissant-de-presunto-e-queijo.webp" srcset="/img/croissant-de-presunto-e-queijo-480.webp 480w, /img/croissant-de-presunto-e-queijo.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de presunto e queijo cortado ao meio, mostrando o presunto e o queijo derretido entre as camadas" loading="lazy"></div><span class="nome-item">Croissant de presunto e queijo</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-calabresa"><img src="/img/croissant-de-calabresa.webp" srcset="/img/croissant-de-calabresa-480.webp 480w, /img/croissant-de-calabresa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de calabresa cortado ao meio, mostrando as fatias de calabresa entre as camadas folhadas" loading="lazy"></div><span class="nome-item">Croissant de calabresa</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-limao"><img src="/img/croissant-de-limao.webp" srcset="/img/croissant-de-limao-480.webp 480w, /img/croissant-de-limao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de limão com açúcar de confeiteiro, cortado ao meio mostrando o creme de limão" loading="lazy"></div><span class="nome-item">Croissant de limão</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-maca"><img src="/img/croissant-de-maca.webp" srcset="/img/croissant-de-maca-480.webp 480w, /img/croissant-de-maca.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de maçã cortado ao meio, mostrando o recheio de cubinhos de maçã com canela" loading="lazy"></div><span class="nome-item">Croissant de maçã</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-banana-com-crumble"><img src="/img/croissant-de-banana-com-crumble.webp" srcset="/img/croissant-de-banana-com-crumble-480.webp 480w, /img/croissant-de-banana-com-crumble.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant de banana coberto com crumble, cortado ao meio mostrando a banana caramelizada" loading="lazy"></div><span class="nome-item">Croissant de banana com crumble</span><span class="preco">R$ 18</span></li><li class="item"><div class="foto" data-foto="croissant-de-nutella"><img src="/img/croissant-de-nutella.webp" srcset="/img/croissant-de-nutella-480.webp 480w, /img/croissant-de-nutella.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant cortado ao meio, recheado com creme de avelã com chocolate" loading="lazy"></div><span class="nome-item">Croissant de Nutella</span><span class="preco">R$ 27,90</span></li><li class="item"><div class="foto" data-foto="croissant-com-abacate"><img src="/img/croissant-com-abacate.webp" srcset="/img/croissant-com-abacate-480.webp 480w, /img/croissant-com-abacate.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Croissant aberto como sanduíche, recheado com creme de abacate" loading="lazy"></div><span class="nome-item">Croissant com abacate</span><span class="preco">R$ 36,90</span></li></ul></section>
+<section id="cardapio-focaccias" class="categoria" aria-labelledby="t-focaccias"><h2 id="t-focaccias">Focaccias</h2><ul class="itens"><li class="item"><div class="foto" data-foto="focaccia-de-tres-queijos"><img src="/img/focaccia-de-tres-queijos.webp" srcset="/img/focaccia-de-tres-queijos-480.webp 480w, /img/focaccia-de-tres-queijos.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pedaço quadrado de focaccia gratinada com três queijos, mostrando o miolo aerado" loading="lazy"></div><span class="nome-item">Focaccia de três queijos</span><span class="preco">R$ 32</span></li><li class="item"><div class="foto" data-foto="focaccia-de-calabresa"><img src="/img/focaccia-de-calabresa.webp" srcset="/img/focaccia-de-calabresa-480.webp 480w, /img/focaccia-de-calabresa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pedaço quadrado de focaccia com rodelas de calabresa, mostrando o miolo aerado" loading="lazy"></div><span class="nome-item">Focaccia de calabresa</span><span class="preco">R$ 32</span></li><li class="item"><div class="foto" data-foto="focaccia-de-tomate-e-manjericao"><img src="/img/focaccia-de-tomate-e-manjericao.webp" srcset="/img/focaccia-de-tomate-e-manjericao-480.webp 480w, /img/focaccia-de-tomate-e-manjericao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pedaço quadrado de focaccia com tomate-cereja e manjericão assados, mostrando o miolo aerado" loading="lazy"></div><span class="nome-item">Focaccia de tomate e manjericão</span><span class="preco">R$ 32</span></li></ul></section>
+<section id="cardapio-doces" class="categoria" aria-labelledby="t-doces"><h2 id="t-doces">Doces</h2><ul class="itens"><li class="item"><div class="foto" data-foto="cinnamon-roll"><img src="/img/cinnamon-roll.webp" srcset="/img/cinnamon-roll-480.webp 480w, /img/cinnamon-roll.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Cinnamon roll com espiral de canela e um fio de glacê, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Cinnamon roll</span><span class="preco">R$ 14</span></li><li class="item"><div class="foto" data-foto="sonho"><img src="/img/sonho.webp" srcset="/img/sonho-480.webp 480w, /img/sonho.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Sonho passado no açúcar, aberto de lado com recheio de creme de confeiteiro" loading="lazy"></div><span class="nome-item">Sonho</span><span class="preco">R$ 14</span></li><li class="item"><div class="foto" data-foto="pao-de-banana-com-gotas-de-chocolate"><img src="/img/pao-de-banana-com-gotas-de-chocolate.webp" srcset="/img/pao-de-banana-com-gotas-de-chocolate-480.webp 480w, /img/pao-de-banana-com-gotas-de-chocolate.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pedaço de pão de banana com gotas de chocolate, mostrando o miolo úmido" loading="lazy"></div><span class="nome-item">Pão de banana com gotas de chocolate</span><span class="preco">R$ 14</span></li><li class="item"><div class="foto" data-foto="muffin-de-chocolate"><img src="/img/muffin-de-chocolate.webp" srcset="/img/muffin-de-chocolate-480.webp 480w, /img/muffin-de-chocolate.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Muffin de chocolate com gotas de chocolate no topo, em forminha de papel pardo" loading="lazy"></div><span class="nome-item">Muffin de chocolate</span><span class="preco">R$ 14</span></li><li class="item"><div class="foto" data-foto="muffin-de-nutella"><img src="/img/muffin-de-nutella.webp" srcset="/img/muffin-de-nutella-480.webp 480w, /img/muffin-de-nutella.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Muffin de chocolate com creme de avelã por cima e recheio aparente, em forminha de papel pardo" loading="lazy"></div><span class="nome-item">Muffin de Nutella</span><span class="preco">R$ 16</span></li><li class="item"><div class="foto" data-foto="brownie"><img src="/img/brownie.webp" srcset="/img/brownie-480.webp 480w, /img/brownie.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Brownie quadrado de casquinha craquelada, com pedaços de chocolate no interior úmido" loading="lazy"></div><span class="nome-item">Brownie</span><span class="preco">R$ 13</span></li><li class="item"><div class="foto" data-foto="cookie"><img src="/img/cookie.webp" srcset="/img/cookie-480.webp 480w, /img/cookie.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Cookie grande e grosso com pedaços de chocolate, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Cookie</span><span class="preco">R$ 13</span></li><li class="item"><div class="foto" data-foto="bolo-gelado-de-coco"><img src="/img/bolo-gelado-de-coco.webp" srcset="/img/bolo-gelado-de-coco-480.webp 480w, /img/bolo-gelado-de-coco.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Pedaço de bolo gelado de coco coberto com coco ralado, num pratinho branco" loading="lazy"></div><span class="nome-item">Bolo gelado de coco</span><small>pedaço</small><span class="preco">R$ 22</span></li></ul></section>
+<section id="cardapio-cafe" class="categoria" aria-labelledby="t-cafe"><h2 id="t-cafe">Café da manhã e lanches</h2><ul class="itens"><li class="item"><div class="foto" data-foto="grande-da-casa"><img src="/img/grande-da-casa.webp" srcset="/img/grande-da-casa-480.webp 480w, /img/grande-da-casa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Bandeja do Grande da Casa vista de cima: seis fatias de pão, ovos mexidos, iogurte, suco de laranja, geleia e manteiga" loading="lazy"></div><span class="nome-item">Grande da Casa</span><small>6 fatias de pão, suco de laranja, ovo mexido, iogurte, geleia e manteiga</small><span class="preco">R$ 89,90</span></li><li class="item"><div class="foto" data-foto="combo-croissant"><img src="/img/combo-croissant.webp" srcset="/img/combo-croissant-480.webp 480w, /img/combo-croissant.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Combo croissant visto de cima: croissant, ovos mexidos e suco de laranja numa bandeja de madeira" loading="lazy"></div><span class="nome-item">Combo croissant</span><small>croissant, ovo mexido e suco de laranja natural</small><span class="preco">R$ 54,90</span></li><li class="item"><div class="foto" data-foto="pao-artesanal-na-chapa"><img src="/img/pao-artesanal-na-chapa.webp" srcset="/img/pao-artesanal-na-chapa-480.webp 480w, /img/pao-artesanal-na-chapa.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Três fatias de pão artesanal na chapa, branco, integral e com sementes, num prato branco visto de cima" loading="lazy"></div><span class="nome-item">Pão artesanal na chapa</span><small>3 fatias sortidas</small><span class="preco">R$ 19,90</span></li><li class="item"><div class="foto" data-foto="pao-na-chapa-com-requeijao"><img src="/img/pao-na-chapa-com-requeijao.webp" srcset="/img/pao-na-chapa-com-requeijao-480.webp 480w, /img/pao-na-chapa-com-requeijao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Três fatias de pão na chapa com requeijão cremoso, num prato branco visto de cima" loading="lazy"></div><span class="nome-item">Pão na chapa com requeijão</span><span class="preco">R$ 29,90</span></li><li class="item"><div class="foto" data-foto="pao-na-chapa-com-ovo-mexido"><img src="/img/pao-na-chapa-com-ovo-mexido.webp" srcset="/img/pao-na-chapa-com-ovo-mexido-480.webp 480w, /img/pao-na-chapa-com-ovo-mexido.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Três fatias de pão na chapa com ovos mexidos cremosos, num prato branco visto de cima" loading="lazy"></div><span class="nome-item">Pão na chapa com ovo mexido</span><span class="preco">R$ 32,90</span></li><li class="item"><div class="foto" data-foto="omelete-com-fatia-de-pao"><img src="/img/omelete-com-fatia-de-pao.webp" srcset="/img/omelete-com-fatia-de-pao-480.webp 480w, /img/omelete-com-fatia-de-pao.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Omelete dobrada com uma fatia de pão na chapa, num prato branco visto de cima" loading="lazy"></div><span class="nome-item">Omelete com fatia de pão</span><span class="preco">R$ 32,90</span></li><li class="item"><div class="foto" data-foto="ovo-mexido-com-queijo"><img src="/img/ovo-mexido-com-queijo.webp" srcset="/img/ovo-mexido-com-queijo-480.webp 480w, /img/ovo-mexido-com-queijo.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Ovos mexidos cremosos com queijo derretido, num prato branco visto de cima" loading="lazy"></div><span class="nome-item">Ovo mexido com queijo</span><span class="preco">R$ 19,90</span></li><li class="item"><div class="foto" data-foto="iogurte-com-salada-de-frutas-e-granola"><img src="/img/iogurte-com-salada-de-frutas-e-granola.webp" srcset="/img/iogurte-com-salada-de-frutas-e-granola-480.webp 480w, /img/iogurte-com-salada-de-frutas-e-granola.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Tigela de iogurte natural com salada de frutas e granola, vista de cima" loading="lazy"></div><span class="nome-item">Iogurte com salada de frutas e granola</span><span class="preco">R$ 25,90</span></li><li class="item"><div class="foto" data-foto="sanduiche-no-brioche-de-queijo-com-jalapeno"><img src="/img/sanduiche-no-brioche-de-queijo-com-jalapeno.webp" srcset="/img/sanduiche-no-brioche-de-queijo-com-jalapeno-480.webp 480w, /img/sanduiche-no-brioche-de-queijo-com-jalapeno.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Sanduíche no brioche cortado ao meio, com queijo derretido e rodelas de jalapeño" loading="lazy"></div><span class="nome-item">Sanduíche no brioche de queijo com jalapeño</span><span class="preco">R$ 32,90</span></li><li class="item"><div class="foto" data-foto="sanduiche-no-brioche-de-ovo-mexido-alface-e-tomate"><img src="/img/sanduiche-no-brioche-de-ovo-mexido-alface-e-tomate.webp" srcset="/img/sanduiche-no-brioche-de-ovo-mexido-alface-e-tomate-480.webp 480w, /img/sanduiche-no-brioche-de-ovo-mexido-alface-e-tomate.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Sanduíche no brioche cortado ao meio, com ovo mexido, alface e tomate" loading="lazy"></div><span class="nome-item">Sanduíche no brioche de ovo mexido, alface e tomate</span><span class="preco">R$ 32,90</span></li></ul></section>
+<section id="cardapio-bebidas" class="categoria" aria-labelledby="t-bebidas"><h2 id="t-bebidas">Bebidas</h2><ul class="itens"><li class="item"><div class="foto" data-foto="sucos-naturais"><img src="/img/sucos-naturais.webp" srcset="/img/sucos-naturais-480.webp 480w, /img/sucos-naturais.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Copo alto de suco de laranja natural com polpa, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Sucos naturais</span><small>laranja, limão, maracujá, laranja com mamão e açaí (500 ml)</small><span class="preco">R$ 16,90 a 26,90</span></li><li class="item"><div class="foto" data-foto="sucos-detox"><img src="/img/sucos-detox.webp" srcset="/img/sucos-detox-480.webp 480w, /img/sucos-detox.webp 800w" sizes="(max-width: 700px) 50vw, 280px" width="800" height="800" alt="Copo alto de suco detox verde, sobre tábua de madeira" loading="lazy"></div><span class="nome-item">Sucos detox</span><small>verde, vermelho, laranja e roxo com iogurte artesanal</small><span class="preco">R$ 25,90</span></li></ul><div class="sem-foto"><span class="nome-item">Refrigerantes e água</span><small>consulte na loja</small></div></section>
+    <p class="ilustrativa">Imagens ilustrativas. Os preços são os do iFood em outubro de 2026 e podem mudar sem aviso.</p>
+    <div class="entrega menu-fim">
+      <div>
+        <h3>Vai querer em quantidade?</h3>
+        <p>Para encomendas maiores, como pães para uma reunião ou um café da manhã em família, fale com a gente pelo WhatsApp e combine o dia da retirada.</p>
+        <p class="alt">Na loja, os valores podem ser diferentes dos do iFood.</p>
+      </div>
+      <div class="acoes"><a class="botao primario" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a></div>
+    </div>
+  </div></div>
+</div>
+</main>
+
+<footer class="rodape faixa">
+  <div class="miolo">
+    <a class="marca" href="#inicio"><span class="selo" lang="ko">보아</span><span class="nome">Boa&nbsp;Artisan Bakery<small>Padaria artesanal em Moema</small></span></a>
+    <div class="col">
+      <p>Alameda dos Jurupis, 421, Moema</p>
+      <p>Telefone (11) 5052-5302</p>
+    </div>
+    <div class="col">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#perguntas">Perguntas frequentes</a>
+      <a href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+      <a href="https://www.ifood.com.br/busca?q=Boa%20Artisan%20Bakery%20Moema" target="_blank" rel="noopener">Pedir no iFood</a>
+      <a href="https://www.instagram.com/boapaesartesanais/" target="_blank" rel="noopener">Instagram @boapaesartesanais</a>
+    </div>
+    <p class="legal">Boa Pão Ltda · CNPJ 32.080.162/0001-73</p>
+  </div>
+</footer>
+
+<a class="whats" href="https://wa.me/5511968443146?text=Ol%C3%A1%2C%20Boa%20Artisan%20Bakery!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener" aria-label="Encomendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2a9.8 9.8 0 0 0-8.4 14.9L2.3 21.7l4.7-1.2A9.8 9.8 0 1 0 12 2.2Zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.7.8-2.7-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2l-.5-.4Z"/></svg>
+  <span>Encomendar</span>
+</a>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Bakery", "name": "Boa Artisan Bakery", "url": "https://boa-artisan-bakery.vercel.app/", "image": "https://boa-artisan-bakery.vercel.app/img/og-boa-paes.jpg", "logo": "https://boa-artisan-bakery.vercel.app/favicon.svg", "alternateName": ["Boa Artisan Bakery Moema", "Boa Pães Artesanais", "Joa Artisan Bakery"], "description": "Padaria artesanal de origem coreana em Moema, especializada em pães de fermentação natural e croissant.", "address": {"@type": "PostalAddress", "streetAddress": "Alameda dos Jurupis, 421", "addressLocality": "São Paulo", "addressRegion": "SP", "postalCode": "04088-000", "addressCountry": "BR"}, "telephone": "+55 11 5052-5302", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:30", "closes": "18:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "07:30", "closes": "12:00"}], "servesCuisine": ["Padaria artesanal", "Coreana", "Francesa"], "priceRange": "R$ 13 a R$ 89,90", "hasMenu": {"@type": "Menu", "name": "Cardápio da Boa Artisan Bakery", "inLanguage": "pt-BR", "hasMenuSection": [{"@type": "MenuSection", "name": "Pães", "hasMenuItem": [{"@type": "MenuItem", "name": "Pão da Casa com alecrim", "description": "250 g, massa branca", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão da Casa com queijo e manjericão", "description": "250 g", "offers": {"@type": "Offer", "price": "30", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão da Casa com azeitona preta", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pãozinho da casa", "description": "250 g, mini baguete", "offers": {"@type": "Offer", "price": "21", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Baguete", "description": "450 g", "offers": {"@type": "Offer", "price": "33", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Ciabatta tradicional", "offers": {"@type": "Offer", "price": "21", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Ciabatta com azeitona verde", "description": "250 g", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Ciabatta com parmesão", "description": "250 g", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Brioche", "description": "600 g, massa cozida que fica macia por dias", "offers": {"@type": "Offer", "price": "46", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Mini brioche", "offers": {"@type": "Offer", "price": "26", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Pães integrais", "hasMenuItem": [{"@type": "MenuItem", "name": "Baguete integral", "description": "450 g", "offers": {"@type": "Offer", "price": "33", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Integral com multigrãos", "description": "480 g", "offers": {"@type": "Offer", "price": "39", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Integral com mix de castanhas", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Integral com alecrim", "offers": {"@type": "Offer", "price": "27", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Croissants", "hasMenuItem": [{"@type": "MenuItem", "name": "Croissant tradicional", "offers": {"@type": "Offer", "price": "16.50", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de amêndoa", "offers": {"@type": "Offer", "price": "24", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de chocolate", "offers": {"@type": "Offer", "price": "20", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de queijo", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de presunto e queijo", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de calabresa", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de limão", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de maçã", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de banana com crumble", "offers": {"@type": "Offer", "price": "18", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant de Nutella", "offers": {"@type": "Offer", "price": "27.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Croissant com abacate", "offers": {"@type": "Offer", "price": "36.90", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Focaccias", "hasMenuItem": [{"@type": "MenuItem", "name": "Focaccia de três queijos", "offers": {"@type": "Offer", "price": "32", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Focaccia de calabresa", "offers": {"@type": "Offer", "price": "32", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Focaccia de tomate e manjericão", "offers": {"@type": "Offer", "price": "32", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Doces", "hasMenuItem": [{"@type": "MenuItem", "name": "Cinnamon roll", "offers": {"@type": "Offer", "price": "14", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Sonho", "offers": {"@type": "Offer", "price": "14", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão de banana com gotas de chocolate", "offers": {"@type": "Offer", "price": "14", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Muffin de chocolate", "offers": {"@type": "Offer", "price": "14", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Muffin de Nutella", "offers": {"@type": "Offer", "price": "16", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Brownie", "offers": {"@type": "Offer", "price": "13", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Cookie", "offers": {"@type": "Offer", "price": "13", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Bolo gelado de coco", "description": "pedaço", "offers": {"@type": "Offer", "price": "22", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Café da manhã e lanches", "hasMenuItem": [{"@type": "MenuItem", "name": "Grande da Casa", "description": "6 fatias de pão, suco de laranja, ovo mexido, iogurte, geleia e manteiga", "offers": {"@type": "Offer", "price": "89.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Combo croissant", "description": "croissant, ovo mexido e suco de laranja natural", "offers": {"@type": "Offer", "price": "54.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão artesanal na chapa", "description": "3 fatias sortidas", "offers": {"@type": "Offer", "price": "19.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão na chapa com requeijão", "offers": {"@type": "Offer", "price": "29.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Pão na chapa com ovo mexido", "offers": {"@type": "Offer", "price": "32.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Omelete com fatia de pão", "offers": {"@type": "Offer", "price": "32.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Ovo mexido com queijo", "offers": {"@type": "Offer", "price": "19.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Iogurte com salada de frutas e granola", "offers": {"@type": "Offer", "price": "25.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Sanduíche no brioche de queijo com jalapeño", "offers": {"@type": "Offer", "price": "32.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Sanduíche no brioche de ovo mexido, alface e tomate", "offers": {"@type": "Offer", "price": "32.90", "priceCurrency": "BRL"}}]}, {"@type": "MenuSection", "name": "Bebidas", "hasMenuItem": [{"@type": "MenuItem", "name": "Sucos naturais", "description": "laranja, limão, maracujá, laranja com mamão e açaí (500 ml)", "offers": {"@type": "AggregateOffer", "lowPrice": "16.90", "highPrice": "26.90", "priceCurrency": "BRL"}}, {"@type": "MenuItem", "name": "Sucos detox", "description": "verde, vermelho, laranja e roxo com iogurte artesanal", "offers": {"@type": "Offer", "price": "25.90", "priceCurrency": "BRL"}}]}], "url": "https://boa-artisan-bakery.vercel.app/#cardapio"}, "sameAs": ["https://www.instagram.com/boapaesartesanais/"], "acceptsReservations": false, "paymentAccepted": "Pedidos pelo iFood: crédito, débito, vale-refeição, vale-alimentação e PIX na entrega"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como faço uma encomenda?", "acceptedAnswer": {"@type": "Answer", "text": "Mande uma mensagem pelo WhatsApp, no (11) 96844-3146, dizendo o que quer e o dia da retirada. A gente confirma e deixa o pedido separado na loja, sem taxa de aplicativo."}}, {"@type": "Question", "name": "Vocês fazem entrega?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, pelo iFood, com pedido mínimo de R$ 30. Dá para agendar o pedido para a hora do café. O horário de entrega no aplicativo pode ser diferente do horário da loja."}}, {"@type": "Question", "name": "Como conservar o pão?", "acceptedAnswer": {"@type": "Answer", "text": "Como não leva conservantes, o pão começa a secar a partir do terceiro dia. Dá para congelar inteiro ou fatiado por cerca de um mês. Na hora de comer, aqueça no forno ou numa frigideira, e ele volta crocante."}}, {"@type": "Question", "name": "Qual é o horário nos feriados?", "acceptedAnswer": {"@type": "Answer", "text": "Nos feriados abrimos das 7h30 às 12h, como aos sábados e domingos. Às segundas a loja fica fechada."}}, {"@type": "Question", "name": "A Boa Artisan Bakery é a antiga Joa de Moema?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A loja da Alameda dos Jurupis se chamava Joa Artisan Bakery e passou a se chamar Boa em janeiro de 2023. No iFood, ela aparece como Boa Artisan Bakery Moema; no Instagram, como Boa Pães Artesanais."}}]}</script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

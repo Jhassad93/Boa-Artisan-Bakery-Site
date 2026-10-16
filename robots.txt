@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boa-artisan-bakery.vercel.app/sitemap.xml
