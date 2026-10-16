@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "Site institucional da Boa Artisan Bakery, padaria artesanal de origem coreana em Moema (Alameda dos Jurupis, 421, São Paulo). O site tem uma página só, com o cardápio completo em `/#cardapio`. É um site estático em HTML, CSS e JavaScript puro, sem etapa de build. Feito pela Deakins-Assad.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhassad93/Boa-Artisan-Bakery-Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhassad93/Boa-Artisan-Bakery-Site/issues"
+  },
+  "homepage": "https://github.com/Jhassad93/Boa-Artisan-Bakery-Site#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
