@@ -1,0 +1,35 @@
+# Boa Artisan Bakery
+
+> Padaria artesanal de origem coreana em Moema, São Paulo. Faz pães de fermentação natural, croissants com manteiga francesa, focaccias e doces todos os dias, na Alameda dos Jurupis, 421. Também é conhecida como Boa Pães Artesanais (nome no Instagram) e foi chamada de Joa Artisan Bakery até janeiro de 2023.
+
+## Informações principais
+
+- Endereço: Alameda dos Jurupis, 421, Moema (Indianópolis), São Paulo, SP, CEP 04088-000. Perto do Shopping Ibirapuera.
+- Horário: terça a sexta, das 7h30 às 18h30; sábado, domingo e feriados, das 7h30 às 12h. Fechada às segundas.
+- Telefone da loja: (11) 5052-5302.
+- Encomendas: pelo WhatsApp (11) 96844-3146, com retirada na loja.
+- Entrega: pelo iFood, na loja "Boa Artisan Bakery Moema", com pedido mínimo de R$ 30.
+- Faixa de preço: de R$ 13 a R$ 89,90.
+- Notas: 4,6 no Google (380 avaliações) e 5,0 no iFood (130 avaliações), em outubro de 2026.
+
+## O que a padaria faz
+
+- Todos os pães são de fermentação natural e lenta, sem conservantes nem aditivos químicos.
+- O croissant é a especialidade da casa, feito com manteiga francesa importada. O de amêndoa é o mais pedido.
+- Os pães são feitos para o dia e costumam acabar cedo, principalmente no fim de semana.
+- Serve café da manhã e lanches na loja.
+
+## Cardápio
+
+- [Cardápio completo com preços](https://boa-artisan-bakery.vercel.app/#cardapio): pães, pães integrais, croissants, focaccias, doces, café da manhã e lanches, e bebidas.
+
+## História
+
+- A casa começou como Joa Artisan Bakery, uma padaria coreana no Bom Retiro, bairro coreano de São Paulo, e abriu em Moema em janeiro de 2019.
+- Em janeiro de 2023, a loja de Moema passou a se chamar Boa, mantendo as mesmas receitas.
+
+## Links
+
+- [Site oficial](https://boa-artisan-bakery.vercel.app/)
+- [Instagram @boapaesartesanais](https://www.instagram.com/boapaesartesanais/)
+- [Perguntas frequentes](https://boa-artisan-bakery.vercel.app/#perguntas): encomendas, entrega, conservação do pão, horário nos feriados e a mudança de nome.

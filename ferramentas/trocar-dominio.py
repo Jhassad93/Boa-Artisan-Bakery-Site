@@ -6,7 +6,7 @@ Uso, na raiz do repositório:
 import os, sys
 
 ATUAL = 'https://boa-artisan-bakery.vercel.app'
-ARQUIVOS = ['index.html', 'robots.txt', 'sitemap.xml', 'ferramentas/trocar-dominio.py']
+ARQUIVOS = ['index.html', 'robots.txt', 'sitemap.xml', 'llms.txt', 'ferramentas/trocar-dominio.py']
 
 def main():
     if len(sys.argv) != 2 or not sys.argv[1].startswith('https://'):

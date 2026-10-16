@@ -12,6 +12,7 @@ img/                fotos em WebP (versões de 480, 720 e 1024 px) e a imagem de
 fonts/              fontes reduzidas aos caracteres usados no site
 favicon.svg
 robots.txt, sitemap.xml
+llms.txt            resumo da padaria em texto simples, para ferramentas de IA
 vercel.json         cabeçalhos de segurança e de cache
 ferramentas/        scripts de manutenção (não vão para a Vercel)
 ```
@@ -37,6 +38,10 @@ Quando houver domínio (por exemplo, `www.boaartisanbakery.com.br`):
    python ferramentas/trocar-dominio.py https://www.novodominio.com.br
    ```
 3. Faça commit e push.
+
+## llms.txt
+
+O `llms.txt` resume a padaria em texto simples (endereço, horários, contatos, especialidades, história e links), no formato proposto em llmstxt.org. É uma proposta recente: não há garantia de que ChatGPT, Gemini ou Perplexity usem o arquivo. **Quando mudar horário, telefone, WhatsApp ou preços no site, atualize o `llms.txt` também.**
 
 ## Google Maps
 
